@@ -1,0 +1,12 @@
+[Unit]
+Description=M-Gateway
+
+[Service]
+WorkingDirectory=/opt/mgateway/apps/
+ExecStart=/opt/mgateway/apps/start.sh
+SyslogIdentifier=mgateway
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
