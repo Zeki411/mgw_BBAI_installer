@@ -18,8 +18,8 @@ echo "Installing dependencies..."
 apt-get install git
 
 # Install LoRaWAN mgateway repositories
-INSTALL_DIR="/opt/mgateway"
-if [ ! -d "$INSTALL_DIR" ]; then mkdir $INSTALL_DIR; fi
+INSTALL_DIR="/opt"
+
 pushd $INSTALL_DIR
 
 # Build LoRa gateway app
