@@ -30,7 +30,7 @@ pushd mgateway
 
 cp $SCRIPT_DIR/start.sh ./apps/start.sh
 
-pushd lora_mgateway
+pushd lora_gateway
 
 make clean
 
