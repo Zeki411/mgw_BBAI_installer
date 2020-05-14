@@ -5,25 +5,17 @@ echo "test"
 sleep 1
 
 {
-    #! parse Data
-    
-    cd /opt/mgateway/apps
-    
-    python3 DataHandle.py
-}&
-
-{
     #! send data to server
     
-    cd /opt/mgateway/apps
+    cd /opt/mgw/apps
     
     python3 TCPPacketForwarder.py
 }&
 
-cd /opt/mgateway/lora_gateway/
+cd /opt/mgw
 
 # Reset PIN
-SX1301_RESET_BCM_PIN=75
+SX1301_RESET_BCM_PIN=17
 echo "$SX1301_RESET_BCM_PIN"  > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/direction
 echo "0"   > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/value
@@ -36,9 +28,9 @@ echo "$SX1301_RESET_BCM_PIN" > /sys/class/gpio/unexport
 
 sleep 2
 
-cd util_pkt_logger
+cd rx_service
 
-./util_pkt_logger
+./mgw_controller
 
 
 exit 0
