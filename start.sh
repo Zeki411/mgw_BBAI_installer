@@ -15,7 +15,7 @@ sleep 1
 cd /opt/mgw
 
 # Reset PIN
-SX1301_RESET_BCM_PIN=17
+SX1301_RESET_BCM_PIN=75
 echo "$SX1301_RESET_BCM_PIN"  > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/direction
 echo "0"   > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/value
