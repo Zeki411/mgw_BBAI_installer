@@ -24,9 +24,9 @@ pushd $INSTALL_DIR
 
 # Build LoRa gateway app
 
-git clone https://github.com/Zeki411/mgw.git
+git clone https://github.com/Zeki411/mgw_BBAI.git
 
-pushd mgw
+pushd mgw_BBAI
 
 cp $SCRIPT_DIR/start.sh ./apps/start.sh
 
