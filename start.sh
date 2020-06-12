@@ -9,7 +9,7 @@ sleep 1
     
     cd /opt/mgw/apps
     
-    python3 TCPPacketForwarder.py
+    python3 TCP_PF/main.py
 }&
 
 cd /opt/mgw
