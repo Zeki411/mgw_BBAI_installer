@@ -2,9 +2,9 @@
 Description=M-Gateway
 
 [Service]
-WorkingDirectory=/opt/mgw/apps/
-ExecStart=/opt/mgw/apps/start.sh
-SyslogIdentifier=mgw
+WorkingDirectory=/opt/mgw_BBAI/apps/
+ExecStart=/opt/mgw_BBAI/apps/start.sh
+SyslogIdentifier=mgw_BBAI
 Restart=on-failure
 RestartSec=5
 
