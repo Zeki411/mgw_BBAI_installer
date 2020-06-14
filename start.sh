@@ -1,21 +1,21 @@
 #!/bin/bash
 
-echo "test"
+echo "Start LoRa"
 
 sleep 1
 
 {
     #! send data to server
     
-    cd /opt/mgw/apps
+    cd /opt/mgw_BBAI/apps
     
     python3 TCP_PF/main.py
 }&
 
-cd /opt/mgw
+cd /opt/mgw_BBAI
 
 # Reset PIN
-SX1301_RESET_BCM_PIN=75
+SX1301_RESET_BCM_PIN=128
 echo "$SX1301_RESET_BCM_PIN"  > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/direction
 echo "0"   > /sys/class/gpio/gpio$SX1301_RESET_BCM_PIN/value
